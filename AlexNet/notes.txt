@@ -1,0 +1,1 @@
+python preprocess_audio.py -src '/home/mqa887/tmp/audiomnist/AudioMNIST-master/data' -dst '/home/mqa887/tmp/audiomnist/AudioMNIST-master/' -m '/home/mqa887/tmp/audiomnist/AudioMNIST-master/data/audioMNIST_meta.txt'
