@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+## PREPROCESSING AUDIOMNIST DATASET
 import numpy as np
 import glob
 import os
