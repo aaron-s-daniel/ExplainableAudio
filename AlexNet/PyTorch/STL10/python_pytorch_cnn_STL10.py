@@ -5,20 +5,22 @@ import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 
-# Define the CNN architecture
+# Define the CNN architecture (modified for 96x96 input)
 class SimpleCNN(nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__()
         self.conv1 = nn.Conv2d(3, 32, 3, padding=1)
         self.conv2 = nn.Conv2d(32, 64, 3, padding=1)
+        self.conv3 = nn.Conv2d(64, 64, 3, padding=1)
         self.pool = nn.MaxPool2d(2, 2)
-        self.fc1 = nn.Linear(64 * 8 * 8, 512)
+        self.fc1 = nn.Linear(64 * 12 * 12, 512)
         self.fc2 = nn.Linear(512, 10)
 
     def forward(self, x):
         x = self.pool(torch.relu(self.conv1(x)))
         x = self.pool(torch.relu(self.conv2(x)))
-        x = x.view(-1, 64 * 8 * 8)
+        x = self.pool(torch.relu(self.conv3(x)))
+        x = x.view(-1, 64 * 12 * 12)
         x = torch.relu(self.fc1(x))
         x = self.fc2(x)
         return x
@@ -29,15 +31,16 @@ print(f"Using device: {device}")
 
 # Define transforms
 transform = transforms.Compose([
+    transforms.Resize((96, 96)),  # STL10 images are already 96x96
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-# Load CIFAR-10 dataset
-trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
+# Load STL10 dataset
+trainset = torchvision.datasets.STL10(root='./data', split='train', download=True, transform=transform)
 trainloader = DataLoader(trainset, batch_size=64, shuffle=True, num_workers=2)
 
-testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
+testset = torchvision.datasets.STL10(root='./data', split='test', download=True, transform=transform)
 testloader = DataLoader(testset, batch_size=64, shuffle=False, num_workers=2)
 
 # Initialize the model, loss function, and optimizer
@@ -58,8 +61,8 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
         running_loss += loss.item()
-        if i % 200 == 199:
-            print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 200:.3f}')
+        if i % 100 == 99:
+            print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 100:.3f}')
             running_loss = 0.0
 
 print('Finished Training')
@@ -79,5 +82,5 @@ with torch.no_grad():
 print(f'Accuracy on test set: {100 * correct / total}%')
 
 # Save the model
-torch.save(model.state_dict(), 'cifar10_cnn.pth')
-print('Model saved as cifar10_cnn.pth')
+torch.save(model.state_dict(), 'stl10_cnn.pth')
+print('Model saved as stl10_cnn.pth')

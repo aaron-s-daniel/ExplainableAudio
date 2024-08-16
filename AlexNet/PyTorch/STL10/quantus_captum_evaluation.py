@@ -44,7 +44,7 @@ print(f"Using device: {device}")
 
 # Load the trained model
 model = SimpleCNN().to(device)
-model.load_state_dict(torch.load('cifar10_cnn.pth', map_location=device))
+model.load_state_dict(torch.load('STL10_cnn.pth', map_location=device))
 model.eval()
 
 # Prepare data
@@ -53,7 +53,7 @@ transform = transforms.Compose([
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
+testset = torchvision.datasets.STL10(root='./data', train=False, download=True, transform=transform)
 testloader = DataLoader(testset, batch_size=100, shuffle=False, num_workers=2)
 
 # Get a batch of test data
