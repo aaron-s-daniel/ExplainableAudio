@@ -1,0 +1,41 @@
+Working directory: /home/mqa887/ExplainableAudio/AlexNet/PyTorch/STL10/quantus_evaluation
+Start time: 2024-08-16 21:30:52
+Loading Anaconda module...
+Activating conda environment...
+Conda environment:
+# conda environments:
+#
+base                     /apps/anaconda3/2024.02-1
+AI                       /home/mqa887/.conda/envs/AI
+myvm                  *  /home/mqa887/.conda/envs/myvm
+
+GPU information:
+Fri Aug 16 21:30:54 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   26C    P0              24W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  Tesla V100S-PCIE-32GB          On  | 00000000:D8:00.0 Off |                  Off |
+| N/A   28C    P0              25W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Results will be saved in: /home/mqa887/ExplainableAudio/AlexNet/PyTorch/STL10/quantus_evaluation/quantus_results_20240816_213054
+Running Quantus XAI evaluation script...
+Using device: cuda
+End time: 2024-08-16 21:31:16
+Results saved in: /home/mqa887/ExplainableAudio/AlexNet/PyTorch/STL10/quantus_evaluation/quantus_results_20240816_213054
