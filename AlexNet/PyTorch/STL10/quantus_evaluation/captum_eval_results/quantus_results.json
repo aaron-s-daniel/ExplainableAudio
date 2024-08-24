@@ -1,0 +1,20 @@
+{
+    "Saliency": {
+        "Robustness": 0.6936889505945145,
+        "Faithfulness": -0.03579585015701042,
+        "Complexity": 0.5619349698913472,
+        "Randomisation": 0.39021380721958965
+    },
+    "IntegratedGradients": {
+        "Robustness": 0.8165549854176446,
+        "Faithfulness": -0.0915931799724603,
+        "Complexity": 0.6766561677683182,
+        "Randomisation": 0.5676063055555327
+    },
+    "GuidedBackprop": {
+        "Robustness": 0.8648348556831479,
+        "Faithfulness": 0.2393944205560956,
+        "Complexity": 0.561934975531315,
+        "Randomisation": 0.3902138072311201
+    }
+}
