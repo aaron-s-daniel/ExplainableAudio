@@ -21,40 +21,42 @@ os.makedirs(results_dir, exist_ok=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-# Load the trained model (assuming you have this from your previous script)
-# Define the CNN architecture
+# Define the CNN architecture for STL10 (96x96 images)
 class SimpleCNN(nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__()
         self.conv1 = nn.Conv2d(3, 32, 3, padding=1)
         self.conv2 = nn.Conv2d(32, 64, 3, padding=1)
+        self.conv3 = nn.Conv2d(64, 64, 3, padding=1)
         self.pool = nn.MaxPool2d(2, 2)
-        self.fc1 = nn.Linear(64 * 8 * 8, 512)
+        self.fc1 = nn.Linear(64 * 12 * 12, 512)
         self.fc2 = nn.Linear(512, 10)
 
     def forward(self, x):
         x = self.pool(torch.relu(self.conv1(x)))
         x = self.pool(torch.relu(self.conv2(x)))
-        x = x.view(-1, 64 * 8 * 8)
+        x = self.pool(torch.relu(self.conv3(x)))
+        x = x.view(-1, 64 * 12 * 12)
         x = torch.relu(self.fc1(x))
         x = self.fc2(x)
         return x
-    
+
 model = SimpleCNN().to(device)
-model.load_state_dict(torch.load('cifar10_cnn.pth', map_location=device))
+model.load_state_dict(torch.load('stl10_cnn.pth', map_location=device))
 model.eval()
 
 # Prepare data
 transform = transforms.Compose([
+    transforms.Resize((96, 96)),
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
+testset = torchvision.datasets.STL10(root='./data', split='test', download=True, transform=transform)
 testloader = DataLoader(testset, batch_size=1000, shuffle=True, num_workers=2)
 
-# CIFAR-10 classes
-classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+# STL10 classes
+classes = ('airplane', 'bird', 'car', 'cat', 'deer', 'dog', 'horse', 'monkey', 'ship', 'truck')
 
 # Define Captum attribution methods
 xai_methods = {
