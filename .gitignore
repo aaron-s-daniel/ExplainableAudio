@@ -166,3 +166,5 @@ cython_debug/
 
 # Downloadable STL X
 AlexNet/PyTorch/STL10/data/stl10_binary/unlabeled_X.bin
+AlexNet/PyTorch/STL10/data/stl10_binary/test_X.bin
+AlexNet/PyTorch/STL10/data/stl10_binary/train_X.bin
