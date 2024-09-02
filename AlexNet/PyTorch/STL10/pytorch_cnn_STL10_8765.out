@@ -1,0 +1,94 @@
+Start time: 2024-09-02 13:23:38
+Loading Anaconda module...
+Activating conda environment...
+Conda environment:
+# conda environments:
+#
+base                     /apps/anaconda3/2024.02-1
+AI                       /home/mqa887/.conda/envs/AI
+myvm                  *  /home/mqa887/.conda/envs/myvm
+
+GPU information:
+Mon Sep  2 13:23:40 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   27C    P0              25W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  Tesla V100S-PCIE-32GB          On  | 00000000:D8:00.0 Off |                  Off |
+| N/A   28C    P0              22W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Running PyTorch CNN script...
+Using device: cuda
+Using downloaded and verified file: ./data/stl10_binary.tar.gz
+Extracting ./data/stl10_binary.tar.gz to ./data
+Files already downloaded and verified
+Epoch 1/50, Train Loss: 2.613, Train Acc: 20.06%, Test Loss: 1.859, Test Acc: 31.00%
+Epoch 2/50, Train Loss: 1.996, Train Acc: 26.32%, Test Loss: 1.765, Test Acc: 33.11%
+Epoch 3/50, Train Loss: 1.862, Train Acc: 29.38%, Test Loss: 1.638, Test Acc: 36.98%
+Epoch 4/50, Train Loss: 1.843, Train Acc: 30.52%, Test Loss: 1.586, Test Acc: 38.42%
+Epoch 5/50, Train Loss: 1.823, Train Acc: 31.56%, Test Loss: 1.549, Test Acc: 39.20%
+Epoch 6/50, Train Loss: 1.773, Train Acc: 33.46%, Test Loss: 1.629, Test Acc: 35.91%
+Epoch 7/50, Train Loss: 1.767, Train Acc: 33.58%, Test Loss: 1.616, Test Acc: 36.69%
+Epoch 8/50, Train Loss: 1.654, Train Acc: 36.24%, Test Loss: 1.423, Test Acc: 44.01%
+Epoch 9/50, Train Loss: 1.580, Train Acc: 40.00%, Test Loss: 1.404, Test Acc: 45.39%
+Epoch 10/50, Train Loss: 1.575, Train Acc: 40.88%, Test Loss: 1.378, Test Acc: 46.58%
+Epoch 11/50, Train Loss: 1.550, Train Acc: 41.26%, Test Loss: 1.367, Test Acc: 46.95%
+Epoch 12/50, Train Loss: 1.533, Train Acc: 42.64%, Test Loss: 1.371, Test Acc: 46.90%
+Epoch 13/50, Train Loss: 1.511, Train Acc: 42.92%, Test Loss: 1.342, Test Acc: 48.42%
+Epoch 14/50, Train Loss: 1.509, Train Acc: 43.92%, Test Loss: 1.332, Test Acc: 49.23%
+Epoch 15/50, Train Loss: 1.485, Train Acc: 44.04%, Test Loss: 1.316, Test Acc: 49.59%
+Epoch 16/50, Train Loss: 1.483, Train Acc: 44.00%, Test Loss: 1.315, Test Acc: 49.79%
+Epoch 17/50, Train Loss: 1.477, Train Acc: 45.02%, Test Loss: 1.318, Test Acc: 49.90%
+Epoch 18/50, Train Loss: 1.468, Train Acc: 45.70%, Test Loss: 1.319, Test Acc: 49.48%
+Epoch 19/50, Train Loss: 1.459, Train Acc: 45.42%, Test Loss: 1.310, Test Acc: 50.35%
+Epoch 20/50, Train Loss: 1.454, Train Acc: 45.54%, Test Loss: 1.309, Test Acc: 50.27%
+Epoch 21/50, Train Loss: 1.487, Train Acc: 44.62%, Test Loss: 1.304, Test Acc: 50.30%
+Epoch 22/50, Train Loss: 1.439, Train Acc: 45.56%, Test Loss: 1.307, Test Acc: 50.23%
+Epoch 23/50, Train Loss: 1.470, Train Acc: 45.18%, Test Loss: 1.297, Test Acc: 50.46%
+Epoch 24/50, Train Loss: 1.460, Train Acc: 45.94%, Test Loss: 1.308, Test Acc: 50.20%
+Epoch 25/50, Train Loss: 1.462, Train Acc: 44.88%, Test Loss: 1.301, Test Acc: 50.39%
+Epoch 26/50, Train Loss: 1.459, Train Acc: 46.08%, Test Loss: 1.303, Test Acc: 50.40%
+Epoch 27/50, Train Loss: 1.470, Train Acc: 44.88%, Test Loss: 1.314, Test Acc: 49.94%
+Epoch 28/50, Train Loss: 1.462, Train Acc: 44.94%, Test Loss: 1.299, Test Acc: 50.51%
+Epoch 29/50, Train Loss: 1.474, Train Acc: 44.42%, Test Loss: 1.308, Test Acc: 50.49%
+Epoch 30/50, Train Loss: 1.444, Train Acc: 45.90%, Test Loss: 1.310, Test Acc: 50.08%
+Epoch 31/50, Train Loss: 1.455, Train Acc: 45.76%, Test Loss: 1.305, Test Acc: 50.46%
+Epoch 32/50, Train Loss: 1.448, Train Acc: 45.48%, Test Loss: 1.299, Test Acc: 50.56%
+Epoch 33/50, Train Loss: 1.453, Train Acc: 44.60%, Test Loss: 1.303, Test Acc: 50.39%
+Epoch 34/50, Train Loss: 1.467, Train Acc: 45.56%, Test Loss: 1.311, Test Acc: 50.30%
+Epoch 35/50, Train Loss: 1.480, Train Acc: 44.78%, Test Loss: 1.309, Test Acc: 50.38%
+Epoch 36/50, Train Loss: 1.463, Train Acc: 45.36%, Test Loss: 1.304, Test Acc: 50.27%
+Epoch 37/50, Train Loss: 1.463, Train Acc: 45.12%, Test Loss: 1.306, Test Acc: 50.26%
+Epoch 38/50, Train Loss: 1.460, Train Acc: 45.04%, Test Loss: 1.302, Test Acc: 50.33%
+Epoch 39/50, Train Loss: 1.459, Train Acc: 45.48%, Test Loss: 1.303, Test Acc: 50.55%
+Epoch 40/50, Train Loss: 1.448, Train Acc: 45.92%, Test Loss: 1.302, Test Acc: 50.34%
+Epoch 41/50, Train Loss: 1.452, Train Acc: 45.40%, Test Loss: 1.315, Test Acc: 50.27%
+Epoch 42/50, Train Loss: 1.455, Train Acc: 46.34%, Test Loss: 1.307, Test Acc: 49.95%
+Epoch 43/50, Train Loss: 1.458, Train Acc: 45.32%, Test Loss: 1.314, Test Acc: 50.38%
+Epoch 44/50, Train Loss: 1.454, Train Acc: 46.20%, Test Loss: 1.302, Test Acc: 50.12%
+Epoch 45/50, Train Loss: 1.449, Train Acc: 45.34%, Test Loss: 1.307, Test Acc: 50.20%
+Epoch 46/50, Train Loss: 1.453, Train Acc: 45.56%, Test Loss: 1.303, Test Acc: 50.39%
+Epoch 47/50, Train Loss: 1.449, Train Acc: 45.74%, Test Loss: 1.294, Test Acc: 50.64%
+Epoch 48/50, Train Loss: 1.460, Train Acc: 45.54%, Test Loss: 1.313, Test Acc: 50.35%
+Epoch 49/50, Train Loss: 1.452, Train Acc: 45.64%, Test Loss: 1.293, Test Acc: 50.27%
+Epoch 50/50, Train Loss: 1.473, Train Acc: 44.78%, Test Loss: 1.303, Test Acc: 50.55%
+Training completed in 411.41 seconds
+Model saved as Results/stl10_improved_cnn.pth
+Final Accuracy on test set: 50.55%
+End time: 2024-09-02 13:31:16
