@@ -1,0 +1,91 @@
+Start time: 2024-09-06 12:52:18
+Loading Anaconda module...
+Activating conda environment...
+Conda environment:
+# conda environments:
+#
+base                     /apps/anaconda3/2024.02-1
+AI                       /home/mqa887/.conda/envs/AI
+myvm                  *  /home/mqa887/.conda/envs/myvm
+
+GPU information:
+Fri Sep  6 12:52:20 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   26C    P0              22W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  Tesla V100S-PCIE-32GB          On  | 00000000:D8:00.0 Off |                  Off |
+| N/A   28C    P0              25W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Running PyTorch CNN script...
+Using device: cuda
+Epoch 1/50, Loss: 3.8705, Acc: 0.0980
+Epoch 2/50, Loss: 2.3034, Acc: 0.0810
+Epoch 3/50, Loss: 2.3030, Acc: 0.0810
+Epoch 4/50, Loss: 2.3028, Acc: 0.0810
+Epoch 5/50, Loss: 2.3030, Acc: 0.0810
+Epoch 6/50, Loss: 2.3029, Acc: 0.0810
+Epoch 7/50, Loss: 2.3026, Acc: 0.0810
+Epoch 8/50, Loss: 2.3027, Acc: 0.0810
+Epoch 9/50, Loss: 2.3027, Acc: 0.0810
+Epoch 10/50, Loss: 2.3026, Acc: 0.0810
+Epoch 11/50, Loss: 2.3026, Acc: 0.0850
+Epoch 12/50, Loss: 2.3026, Acc: 0.0810
+Epoch 13/50, Loss: 2.3026, Acc: 0.0810
+Epoch 14/50, Loss: 2.3026, Acc: 0.0810
+Epoch 15/50, Loss: 2.3026, Acc: 0.0810
+Epoch 16/50, Loss: 2.3026, Acc: 0.0810
+Epoch 17/50, Loss: 2.3025, Acc: 0.0810
+Epoch 18/50, Loss: 2.3026, Acc: 0.0810
+Epoch 19/50, Loss: 2.3026, Acc: 0.0810
+Epoch 20/50, Loss: 2.3025, Acc: 0.0810
+Epoch 21/50, Loss: 2.3025, Acc: 0.0810
+Epoch 22/50, Loss: 2.3025, Acc: 0.0810
+Epoch 23/50, Loss: 2.3025, Acc: 0.0810
+Epoch 24/50, Loss: 2.3026, Acc: 0.0810
+Epoch 25/50, Loss: 2.3025, Acc: 0.0810
+Epoch 26/50, Loss: 2.3025, Acc: 0.0810
+Epoch 27/50, Loss: 2.3025, Acc: 0.0810
+Epoch 28/50, Loss: 2.3025, Acc: 0.0810
+Epoch 29/50, Loss: 2.3025, Acc: 0.0810
+Epoch 30/50, Loss: 2.3025, Acc: 0.0810
+Epoch 31/50, Loss: 2.3025, Acc: 0.0810
+Epoch 32/50, Loss: 2.3025, Acc: 0.0810
+Epoch 33/50, Loss: 2.3025, Acc: 0.0810
+Epoch 34/50, Loss: 2.3025, Acc: 0.0810
+Epoch 35/50, Loss: 2.3025, Acc: 0.0810
+Epoch 36/50, Loss: 2.3025, Acc: 0.0810
+Epoch 37/50, Loss: 2.3025, Acc: 0.0810
+Epoch 38/50, Loss: 2.3025, Acc: 0.0810
+Epoch 39/50, Loss: 2.3025, Acc: 0.0810
+Epoch 40/50, Loss: 2.3025, Acc: 0.0810
+Epoch 41/50, Loss: 2.3025, Acc: 0.0810
+Epoch 42/50, Loss: 2.3025, Acc: 0.0810
+Epoch 43/50, Loss: 2.3025, Acc: 0.0810
+Epoch 44/50, Loss: 2.3025, Acc: 0.0810
+Epoch 45/50, Loss: 2.3025, Acc: 0.0810
+Epoch 46/50, Loss: 2.3024, Acc: 0.0810
+Epoch 47/50, Loss: 2.3025, Acc: 0.0810
+Epoch 48/50, Loss: 2.3025, Acc: 0.0810
+Epoch 49/50, Loss: 2.3024, Acc: 0.0810
+Epoch 50/50, Loss: 2.3026, Acc: 0.0810
+Best validation accuracy: 0.0980
+Test accuracy: 9.80%
+Model training completed and best model saved as 'best_audiomnist_alexnet.pth'
+End time: 2024-09-06 12:55:22

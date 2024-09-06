@@ -163,6 +163,7 @@ cython_debug/
 
 # tar files
 *.tar.gz
+*.pth 
 
 # Downloadable STL X
 AlexNet/PyTorch/STL10/data/stl10_binary/unlabeled_X.bin
