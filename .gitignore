@@ -169,3 +169,4 @@ cython_debug/
 AlexNet/PyTorch/STL10/data/stl10_binary/unlabeled_X.bin
 AlexNet/PyTorch/STL10/data/stl10_binary/test_X.bin
 AlexNet/PyTorch/STL10/data/stl10_binary/train_X.bin
+AlexNet/PyTorch/STL10/Results/stl10_improved_cnn.pth
